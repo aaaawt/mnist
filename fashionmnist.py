@@ -56,7 +56,7 @@ def main():
                                                    batch_size=64)
     model = Model()
     loss = nn.CrossEntropyLoss()
-    optim = torch.optim.SGD(model.parameters(), lr=0.001)
+    optim = torch.optim.Adam(model.parameters(), lr=0.003)
     losses = []
     for epoch in range(1000):
         for i, (x_train, y_train) in enumerate(train_data_loader):
